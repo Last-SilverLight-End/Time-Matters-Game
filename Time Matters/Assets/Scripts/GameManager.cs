@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     int currnet_ix = 0; // 현재 대사 인덱스
 
+    public GameObject menu_icon;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("return_to_mainmenu"))
+            MenuSet.SecActive(true);
     }
 }
